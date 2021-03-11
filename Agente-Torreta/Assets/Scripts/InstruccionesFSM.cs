@@ -2,7 +2,7 @@
 
 public abstract class InstruccionesFSM
 {
-    public abstract void EnterState();
+    public abstract void EnterState(TorretaEstatica torreta);
     
-    public abstract void UpdateState();
+    public abstract void UpdateState(TorretaEstatica torreta);
 }
