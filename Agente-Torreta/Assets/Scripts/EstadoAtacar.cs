@@ -22,6 +22,13 @@ public class EstadoAtacar : InstruccionesFSM
         {
             var lookRotation = Quaternion.LookRotation(torreta.playerTarget.transform.position - torreta.transform.position);
             torreta.transform.rotation = Quaternion.Slerp(torreta.transform.rotation, lookRotation, torreta.speedRotation * Time.deltaTime);
+
+            //Disparar
+            if(nextFire < Time.time)
+            {
+                torreta.FireBullet();
+                nextFire = Time.time + rateFire;
+            }
         }
         else
         {

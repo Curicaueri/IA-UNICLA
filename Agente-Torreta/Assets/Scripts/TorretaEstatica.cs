@@ -82,6 +82,12 @@ public class TorretaEstatica : MonoBehaviour
     {
         StartCoroutine(thisCoroutine);
     }
+
+    public void FireBullet()
+    {
+        Instantiate(prefabBullet, canion.position, canion.rotation);
+    }
+
     //Metodo para poder visualizar el colisionador invisible que esta en el metodo TargetDetet
     private void OnDrawGizmos()
     {
